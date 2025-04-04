@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Password Strength Tester </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('Background.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+    <h1> Password Strength Tester </h1>
+    <br>
+    <label>Password: </label>
+    <div class="input-box">
+        <input type="text" id="password" required>
+        <p id="message">Password is <span id="strength"></span></p>
+    </div>
+    <br>
+    <a href="Home Page.html">
+        <button type="button" class="input-box" style="position: fixed; top: 10px; right: 10px">Home Page</button>
+    </a>
+    <script src="JavaS.js"></script>
+        
+   <script> 
+        var pass = document.getElementById("password");
+        var msg = document.getElementById("message");
+        var str = document.getElementById("strength");
+
+        pass.addEventListener('input', () => {
+            if(pass.value.length > 0){
+                msg.style.display = "block";
+
+            }
+            else{
+                msg.style.display = "none"
+            }
+            if (pass.value.length < 4){
+                str.innerHTML = "weak - requires more characters.";
+            }
+            if (pass.value.length > 5){
+                str.innerHTML = "okay - could do with more characters.";
+            }
+            if (pass.value.length > 7){
+                str.innerHTML = "secure.";
+            }
+        })
+
+
+    </script>
+</body>
+</html>

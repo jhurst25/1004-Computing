@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manage Accounts </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-image: url('Background.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+
+    <h1> Password Manager </h1>
+    <label>Username: </label>
+    <input type="text" id="username" placeholder="Enter Username" required>
+    <br>
+    <label>Password: </label>
+    <input type="text" id="password" placeholder="Enter Password" required>
+    <br>
+    <a href="Home Page.html">
+        <button type="button" class="btn" style="position: fixed; top: 10px; right: 10px">Home Page</button>
+    </a>
+    <br>
+    <button onclick="addPassword()">Add Account</button>
+    <ul id="accounts-list"></ul>
+
+
+    <table id="accounts-table">
+        <thead style="position: fixed; top: 100px; background: transparent;">
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Action</th>
+            </tr>
+            <br>
+        </thead>
+        <tbody id="accounts-list">
+        </tbody>
+    </table>
+
+    <script src="JavaS.js"></script>
+
+</body>
+</html>

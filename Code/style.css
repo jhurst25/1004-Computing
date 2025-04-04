@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+
+
+#message{
+    position: center;
+    height: 90vh;
+    color: #fff;
+    font-size: 15px;
+    display: none;
+}
